@@ -1,0 +1,75 @@
+Overview:
+    // MVC design pattern
+    // Node and MySQL to query and route data
+    // Handlebars to generate HTML
+
+    // form where users can submit the names of the burgers they'd like to eat
+        // let's use something other than bootstrap
+    // display burger on one side of the page w/ a button to eat it for each respective burger
+        // change class or appending?
+    // once the button is clicked --> burger moves to the other side of the page
+        // re: line 9
+    // store every burger in MySQL database
+
+To-Do:
+    // npm init
+        // express
+        // express-handlebars
+        // mysql
+    // server.js
+        // require express
+    
+    // db folder
+        // schema.sql
+            // burgers_db
+            // burgers (table)
+                // id INT(10) NOT NULL AUTO_INCREMENT,
+                   burger_name VARCHAR(50) NOT NULL,
+                   devour boolean NOT NULL,
+                   PRIMARY KEY (id)
+        // seeds.sql
+            // insert 3 different burgers
+        // in the db folder:
+            // CLI: mysql -u root -p
+                    source schema.sql
+                    source seeds.sql 
+                    exit
+    
+    // config folder 
+        // connection.js
+            // set up code to connect node to mysql
+            // export the connection
+        // orm.js
+            // require(connection.js)
+            // MySQL commands
+                // selectAll()
+                // insertOne()
+                // updateOne()
+            // export the orm object in module.exports
+    
+    // models folder
+        // burger.ks
+            // import (../config/orm.js)
+            // import (../config/burger.js)
+            // calls the ORM function using burger specific input for the ORM
+            // export burger.js
+    
+    // controllers
+        // burgers_controller.js 
+            // import express
+            // import (../config/burger.js)
+            // creat the router for the app + export it at the end
+    
+    // views
+        // index.handlebars
+            // set up to have the template that Handlebars can render onto
+            // button that will submit user input into the db
+        // layouts folder
+            // main.handlebars
+                // set up so it's able to be used by Handlebars
+    
+    // public
+        // assets
+            // class 
+                // burger_style.css
+            // img
