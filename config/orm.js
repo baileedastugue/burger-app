@@ -13,11 +13,10 @@ function questionMarks(number) {
 var orm = {
     // selectAll
     selectAll: function(table, cb) {
-        var qString = "SELECT * FROM ? ;";
-        connection.query(qString, [table], function(err, result) {
+        var qString = "SELECT * FROM " + table + ";";
+        connection.query(qString, function(err, result) {
             if (err) throw err;
             // this passes the result from the database to another function
-            console.log(result);
             cb(result);
         })
     },
@@ -35,3 +34,5 @@ var orm = {
 
 };
 // export the orm object
+
+module.exports = orm;
