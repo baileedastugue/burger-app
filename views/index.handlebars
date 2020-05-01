@@ -6,7 +6,6 @@
         {{#unless devour}}
             {{this.id}}.
             {{this.burger_name}}
-            <br> <p>has been devoured: {{this.devour}}</p>
             {{> burgers/burger-block devour=true}}
         {{/unless}}
     {{/each}}
@@ -18,7 +17,6 @@
         {{#if devour}}
             {{this.id}}.
             {{this.burger_name}}
-            <br> <p>has been devoured: {{this.devour}}</p>
             {{> burgers/burger-block devour=false}}        
         {{/if}}
     {{/each}}
