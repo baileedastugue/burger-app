@@ -8,13 +8,13 @@ $(function() {
             devour: newDevour
         };
         console.log(newDevourState);
-        // $.ajax("/api/burgers/" + id, {
-        //     type: "PUT",
-        //     data: newDevourState
-        // }).then(function () {
-        //     console.log("changed devour state to", newDevour);
-        //     location.reload();
-        // })
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: newDevourState
+        }).then(function () {
+            console.log("changed devour state to", newDevour);
+            location.reload();
+        })
     });
 
     $("#create-form").on("submit", function(event){
