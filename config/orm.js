@@ -7,7 +7,22 @@ function questionMarks(number) {
         qArray.push("?");
     }
     return qArray.toString();
+};
+
+function objectToSQL(object) {
+    var arr = [];
+    for (var key in object) {
+        var value = object[key];
+        if (Object.hasOwnProperty.call(ob, key)) {
+            if (typeof value === "string" && value.indexOf(" ") >= 0) {
+                value = "'" + value + "'";
+            }
+            arr.push(key + "=" + value);
+        }
+    }
+    return arr.toString();
 }
+
 
 // MySQL commands 
 var orm = {
@@ -23,14 +38,24 @@ var orm = {
     // insertOne - insert into table (burger_name) values (?)
     insertOne: function(table, cols, vals, cb) {
         var qString = "INSERT INTO " + table + " (";
-        qString += cols.toString(); + ") VALUES (";
-        qString += questionMarks(vals.length) + ");";
-        connection.query(qString, vals, function(err, results) {
+        qString += cols.toString() + ") VALUES (";
+        qString += questionMarks(vals.length) + ")";
+        connection.query(qString, vals, function(err, result) {
             if (err) throw err;
-            cb(results);
+            cb(result);
         })
     },
-    // updateOne - UPDATE burgers SET ?? 
+    // updateOne - UPDATE burgers SET burger_name ?? = ? where id ?? = ? 
+    updateOne: function(table, columnValues, condition, cb) {
+        var qString = "UPDATE " + table + " SET ";
+        qString += objectToSQL(columnValues) + " WHERE " + condition;
+
+        console.log(qString);
+        connection.query(qString, function(err, result) {
+            if (err) throw err;
+            cb(result);
+        })
+    }
 
 };
 // export the orm object
