@@ -2,6 +2,10 @@
 
 <ul>
     {{#each burgers}}
-        {{this.id}}. {{this.burger_name}}.
+        {{#unless devour}}
+            {{this.id}}.
+            {{this.burger_name}}
+            {{> burgers/burger-block devour=1}}
+        {{/unless}}
     {{/each}}
 </ul>
