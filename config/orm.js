@@ -9,11 +9,17 @@ function questionMarks(number) {
     return qArray.toString();
 };
 
+// Helper function to convert object key/value pairs --> SQL syntax
+// from key: value --> key = value
 function objectToSQL(object) {
     var arr = [];
+    // pushes in the key into the array (ln 15)
     for (var key in object) {
         var value = object[key];
-        if (Object.hasOwnProperty.call(ob, key)) {
+        // checks to skip any hidden params
+        if (Object.hasOwnProperty.call(object, key)) {
+            console.log("line 20");
+            console.log(value);
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
