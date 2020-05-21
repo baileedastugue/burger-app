@@ -1,33 +1,73 @@
-<h1>Burgers</h1>
+<!-- Just an image -->
+<nav class="navbar">
+  <a class="navbar-brand" href="#">
+    {{!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> --}}
+  </a>
+</nav>
 
-<h2>Burgers that are ready</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless devour}}
-            {{this.id}}.
-            {{this.burger_name}}
-            {{> burgers/burger-block devour=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            {{!-- <img src="./assets/images/Burger.gif" id="burger-centered"> --}}
+        </div>
+        <div class="col-md-8">
+            <div class="row" id="place-order">
+                <div class="col-4">
+                    <h2>Place your order</h2>
+                </div>                
+                <div class="col-8">
+                    <form class="form-inline" id="create-form" >
+                        <div class="form-group create-form">
+                            <input type="text" id="addBurger" name="burger_name">
+                        </div>
+                        <button type="submit" class="submit btn btn-primary">Place order</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="order-up">
+                <div class="col-4">
+                    <h2>Order up</h2>
+                </div>
+                <div class="col-8">
+                    <div class="horizontal_scroll">
+                        {{#each burgers}}
+                            {{#unless devour}}
 
-<h2>Burgers that have been eaten</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devour}}
-            {{this.id}}.
-            {{this.burger_name}}
-            {{> burgers/burger-block devour=false}}        
-        {{/if}}
-    {{/each}}
-</ul>
+                        <div class="burger-containers">
+                            {{!-- <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            </p> --}}
+                                {{this.id}}.
+                                {{this.burger_name}}<br>
+                                {{> burgers/burger-block devour=true}}
+                        </div>
+                        {{/unless}}
 
-<h2>Create a burger</h2>
-<form id="create-form">
-    <div class="form-group">
-        <label for="addBurger">Burger Name:</label>
-        <input type="text" id="addBurger" name="burger_name">
+                        {{/each}}
+                        
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h2>Previous orders</h2>
+                </div>
+                <div class="col-8">
+                    <div class="horizontal_scroll">
+                        {{#each burgers}}
+                                {{#if devour}}
+
+                            <div class="burger-containers">
+                                {{this.id}}.
+                                {{this.burger_name}}<br>
+                                {{> burgers/burger-block devour=false}}        
+                            </div>
+                            {{/if}}
+
+                        {{/each}}
+                    </div>
+                </div>                
+            </div>
+        </div>           
     </div>
-    <button type="submit" class="submit">Add New Burger</button>
-
-</form>
+</div>

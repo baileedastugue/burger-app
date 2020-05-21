@@ -1,11 +1,10 @@
-<ul>
-    <button data-id="{{this.id}}" class="change-devour" data-newdevour="{{devour}}">
+{{!-- <ul> --}}
+    <button data-id="{{this.id}}" class="change-devour btn btn-warning" data-newdevour="{{devour}}">
         {{#if devour}}
             Devour
             {{else}}
             Remake!
         {{/if}}
-    </button>
-    <button data-id="{{this.id}}" class="delete">Delete</button><br>
+    </button> <button data-id="{{this.id}}" class="delete btn btn-danger">Delete</button><br>
 
-</ul>
+{{!-- </ul> --}}

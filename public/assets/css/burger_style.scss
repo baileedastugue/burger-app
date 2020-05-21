@@ -1,0 +1,61 @@
+$red: #db2a10;
+$green: #8f8a14;
+$purple: #731e48;
+$yellow: #ef8829;
+$focus-font: 'Merriweather', serif;
+$secondary-font: 'Rock Salt', cursive;
+
+.container-fluid {
+    margin-top: 2vw;
+    color: white;
+    background-color: black;
+    
+    height: 100%;
+    position: relative;
+    
+    #burger-centered {
+        position: absolute;
+        left: 5vw;
+        top: -20vw;
+        height: 80vw;
+        margin: 0px;
+        padding: 0px;
+    }    
+    .form-inline {
+        .btn {
+            padding: 1vw;
+            margin: 1vw;
+        }
+        input {
+            width: 30vw;
+        }
+    }
+    div.horizontal_scroll {
+        // overflow: auto;
+        // overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 40vw;
+        height: 5vw;
+        margin: 0px;
+        // transform-origin: right top;
+        // transform: rotate(-90deg) translateY(-5vw);
+        div.burger-containers {
+            white-space: unset;
+            display: inline-block;
+            text-align: center;
+            // margin: 1vw 0px;
+            // padding: 5vw;
+            width: 10vw;
+            height: 4vw;
+            // transform-origin: right top;
+            // transform: rotate(90deg);
+        }
+    }
+} 
+
+.navbar {
+    height: 5vw;
+    background-color: $red;
+}
+

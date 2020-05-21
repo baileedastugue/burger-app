@@ -29,7 +29,7 @@ $(function() {
 
     $("#create-form").on("submit", function(event){
         event.preventDefault();
-
+        console.log("hello from buger.js line 32");
         var addedBurger = {
             burger_name: $("#addBurger").val().trim()
         };
@@ -45,3 +45,4 @@ $(function() {
     })
 
 })
+

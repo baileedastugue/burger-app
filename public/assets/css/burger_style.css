@@ -1,0 +1,47 @@
+.container-fluid {
+  margin-top: 2vw;
+  color: white;
+  background-color: black;
+  height: 100%;
+  position: relative;
+}
+
+.container-fluid #burger-centered {
+  position: absolute;
+  left: 5vw;
+  top: -20vw;
+  height: 80vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-fluid .form-inline .btn {
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.container-fluid .form-inline input {
+  width: 30vw;
+}
+
+.container-fluid div.horizontal_scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 40vw;
+  height: 5vw;
+  margin: 0px;
+}
+
+.container-fluid div.horizontal_scroll div.burger-containers {
+  white-space: unset;
+  display: inline-block;
+  text-align: center;
+  width: 10vw;
+  height: 4vw;
+}
+
+.navbar {
+  height: 5vw;
+  background-color: #db2a10;
+}
+/*# sourceMappingURL=burger_style.css.map */
