@@ -2,54 +2,64 @@ $red: #db2a10;
 $green: #8f8a14;
 $purple: #731e48;
 $yellow: #ef8829;
-$focus-font: 'Merriweather', serif;
-$secondary-font: 'Rock Salt', cursive;
+$focus-font: 'Rock Salt', cursive;
+$secondary-font: 'Merriweather', serif;
+
+#wrapper {
+    overflow: hidden;
+}
 
 .container-fluid {
-    margin-top: 2vw;
+    // height: 38vw;
+    h2 {
+        font-family: $focus-font;
+        font-size: 2.5vw;
+    }
+    .row {
+        margin: 5vw;
+        // float: right;
+    }
+    margin: 5vw 0vw;
     color: white;
     background-color: black;
-    
-    height: 100%;
     position: relative;
-    
     #burger-centered {
         position: absolute;
         left: 5vw;
-        top: -20vw;
-        height: 80vw;
+        top: -18vw;
+        height: 70vw;
         margin: 0px;
         padding: 0px;
     }    
     .form-inline {
+        padding: 5% 0%;
         .btn {
-            padding: 1vw;
-            margin: 1vw;
+           height: 3vw;
+           margin: 1vw;
         }
         input {
-            width: 30vw;
+            width: 20vw;
+            height: 3vw;
         }
     }
     div.horizontal_scroll {
-        // overflow: auto;
-        // overflow-y: hidden;
         overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
-        width: 40vw;
-        height: 5vw;
+        width: 100%;
+        height: 100%;
         margin: 0px;
-        // transform-origin: right top;
-        // transform: rotate(-90deg) translateY(-5vw);
         div.burger-containers {
-            white-space: unset;
+            margin: auto;
+            white-space: normal;
             display: inline-block;
             text-align: center;
-            // margin: 1vw 0px;
-            // padding: 5vw;
-            width: 10vw;
-            height: 4vw;
-            // transform-origin: right top;
-            // transform: rotate(90deg);
+            width: 15vw;
+            height: 100%;
+            p {
+                overflow-y: scroll;
+                max-height: 50%;
+            }
         }
     }
 } 

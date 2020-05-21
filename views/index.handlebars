@@ -4,20 +4,20 @@
     {{!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> --}}
   </a>
 </nav>
-
-<div class="container-fluid">
+<div id="wrapper">
+    <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4">
-            {{!-- <img src="./assets/images/Burger.gif" id="burger-centered"> --}}
+        <div class="col-lg-4 col-md-2">
+            <img src="./assets/images/Burger.gif" id="burger-centered">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-10 col-lg-8">
             <div class="row" id="place-order">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-12">
                     <h2>Place your order</h2>
                 </div>                
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <form class="form-inline" id="create-form" >
-                        <div class="form-group create-form">
+                        <div class="form-group">
                             <input type="text" id="addBurger" name="burger_name">
                         </div>
                         <button type="submit" class="submit btn btn-primary">Place order</button>
@@ -25,20 +25,17 @@
                 </div>
             </div>
             <div class="row" id="order-up">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-12">
                     <h2>Order up</h2>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <div class="horizontal_scroll">
                         {{#each burgers}}
                             {{#unless devour}}
 
                         <div class="burger-containers">
-                            {{!-- <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            </p> --}}
-                                {{this.id}}.
-                                {{this.burger_name}}<br>
+                                <p>{{this.id}}.
+                                {{this.burger_name}}</p>
                                 {{> burgers/burger-block devour=true}}
                         </div>
                         {{/unless}}
@@ -49,17 +46,17 @@
                 </div>                
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-12">
                     <h2>Previous orders</h2>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <div class="horizontal_scroll">
                         {{#each burgers}}
                                 {{#if devour}}
 
                             <div class="burger-containers">
-                                {{this.id}}.
-                                {{this.burger_name}}<br>
+                                <p>{{this.id}}.
+                                {{this.burger_name}}</p>
                                 {{> burgers/burger-block devour=false}}        
                             </div>
                             {{/if}}
@@ -70,4 +67,6 @@
             </div>
         </div>           
     </div>
+</div>
+
 </div>
