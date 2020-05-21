@@ -110,4 +110,117 @@
 .navbar a h1:hover {
   color: black;
 }
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    height: 6vw;
+  }
+  .navbar a h1 {
+    font-size: 3vw;
+  }
+  .container-fluid {
+    font-size: 1.5vw;
+  }
+  .container-fluid div#order-up {
+    padding-top: 5vw;
+  }
+  .container-fluid div#previous-orders {
+    padding-top: 3vw;
+  }
+  .container-fluid #burger-centered {
+    left: -3vw;
+    height: 80vw;
+  }
+  .container-fluid .form-inline {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .container-fluid .form-inline .btn {
+    height: 4vw;
+    margin: 0px;
+  }
+  .container-fluid .form-inline input {
+    width: 26vw;
+    height: 4vw;
+  }
+  .container-fluid div.horizontal_scroll div.burger-containers {
+    width: 19vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar a h1 {
+    font-size: 3vw;
+  }
+  .container-fluid #burger-centered {
+    left: -5vw;
+    top: -18vw;
+    height: 100vw;
+  }
+  .container-fluid .form-inline {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .container-fluid .form-inline .btn {
+    height: 4vw;
+  }
+  .container-fluid .form-inline input {
+    width: 40vw;
+    height: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 6vw;
+  }
+  .navbar a h1 {
+    font-size: 2.5vw;
+  }
+  div.col-lg-8.col-md-12 {
+    padding: 0px;
+  }
+  .container-fluid {
+    font-size: 1.8vw;
+  }
+  .container-fluid div#order-up {
+    padding-top: 0vw;
+  }
+  .container-fluid div#previous-orders {
+    padding-top: 0vw;
+  }
+  .container-fluid #burger-centered {
+    left: -18vw;
+    top: -1vw;
+    height: 80vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    height: 7vw;
+  }
+  .navbar a h1 {
+    font-size: 2.5vw;
+  }
+  .container-fluid {
+    font-size: 2vw;
+  }
+  .container-fluid #burger-centered {
+    left: -20vw;
+    top: -1vw;
+    height: 95vw;
+  }
+  .container-fluid .btn {
+    font-size: 1vw;
+  }
+  .container-fluid .form-inline .btn {
+    padding: 0px;
+    height: 5vw;
+  }
+  .container-fluid .form-inline input {
+    width: 40vw;
+    height: 5vw;
+  }
+}
 /*# sourceMappingURL=burger_style.css.map */

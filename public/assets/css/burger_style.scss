@@ -103,3 +103,125 @@ $secondary-font: 'Roboto', sans-serif;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .navbar {
+        height: 6vw;
+        a h1 {
+            font-size: 3vw;
+        }
+    }
+    .container-fluid {
+        font-size: 1.5vw;
+        div#order-up {
+            padding-top: 5vw;   
+        }
+        div#previous-orders {
+            padding-top: 3vw;
+        }
+        #burger-centered {
+            left: -3vw;
+            height: 80vw;
+        }  
+        .form-inline {
+            margin-top: 0px;
+            padding: 0px;
+            .btn {
+               height: 4vw;
+               margin: 0px;
+            }
+            input {
+                width: 26vw;
+                height: 4vw;
+            }
+        }
+        div.horizontal_scroll {
+            div.burger-containers {
+                width: 19vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        a h1 {
+            font-size: 3vw;
+        }
+    }
+    .container-fluid {
+        #burger-centered {
+            left: -5vw;
+            top: -18vw;
+            height: 100vw;
+        }  
+        .form-inline {
+            margin-top: 0px;
+            padding: 0px;
+            .btn {
+               height: 4vw;
+               
+            }
+            input {
+                width: 40vw;
+                height: 4vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 6vw;
+        a h1 {
+            font-size: 2.5vw;
+        }
+    }
+    div.col-lg-8.col-md-12 {
+        padding: 0px;
+    }
+    .container-fluid {
+        font-size: 1.8vw;
+        div#order-up {
+            padding-top: 0vw;   
+        }
+        div#previous-orders {
+            padding-top: 0vw;
+        }
+        #burger-centered {
+            left: -18vw;
+            top: -1vw;
+            height: 80vw;
+        }  
+ 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        height: 7vw;
+        a h1 {
+            font-size: 2.5vw;
+        }
+    }
+    .container-fluid {
+        font-size: 2vw;
+        #burger-centered {
+            left: -20vw;
+            top: -1vw;
+            height: 95vw;
+        }  
+        .btn {
+            font-size: 1vw;
+        }
+        .form-inline {
+            .btn {
+            padding: 0px;
+               height: 5vw;
+            }
+            input {
+                width: 40vw;
+                height: 5vw;
+            }
+        }
+    }
+}
