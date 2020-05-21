@@ -1,6 +1,9 @@
 $red: #db2a10;
-$green: #8f8a14;
-$purple: #731e48;
+$dark-red: #B2190F;
+$green: #A0A910;
+$dark-green: #8f8a14;
+$purple: #860F3F;
+$dark-purple: #731e48;
 $yellow: #ef8829;
 $focus-font: 'Rock Salt', cursive;
 $secondary-font: 'Roboto', sans-serif;
@@ -12,14 +15,29 @@ $secondary-font: 'Roboto', sans-serif;
 .container-fluid {
     font-family: $secondary-font;
     font-size: 1.2vw;
-    // height: 38vw;
+    .btn {
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    .btn-delete {
+        background-color: $red;
+    }
+    .btn-delete:hover {
+        background-color: $dark-red;
+    }
+    .btn-devour {
+        background-color: $green;
+    }
+    .btn-devour:hover {
+        background-color: $dark-green;
+    }
     h2 {
         font-family: $focus-font;
         font-size: 2.5vw;
     }
     .row {
         margin: 5vw;
-        // float: right;
     }
     margin: 5vw 0vw;
     color: white;
@@ -38,6 +56,12 @@ $secondary-font: 'Roboto', sans-serif;
         .btn {
            height: 3vw;
            margin: 1vw;
+        }
+        .btn-submit {
+            background-color: $purple;
+        }
+        .btn-submit:hover {
+            background-color: $dark-purple;
         }
         input {
             width: 20vw;
@@ -69,5 +93,13 @@ $secondary-font: 'Roboto', sans-serif;
 .navbar {
     height: 5vw;
     background-color: $red;
+    a h1 {
+        font-family: $focus-font;
+        color: white;
+        padding-left: 5vw;
+    }
+    a h1:hover {
+        color: black;
+    }
 }
 

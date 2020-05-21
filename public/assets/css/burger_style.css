@@ -11,6 +11,28 @@
   position: relative;
 }
 
+.container-fluid .btn {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.container-fluid .btn-delete {
+  background-color: #db2a10;
+}
+
+.container-fluid .btn-delete:hover {
+  background-color: #B2190F;
+}
+
+.container-fluid .btn-devour {
+  background-color: #A0A910;
+}
+
+.container-fluid .btn-devour:hover {
+  background-color: #8f8a14;
+}
+
 .container-fluid h2 {
   font-family: "Rock Salt", cursive;
   font-size: 2.5vw;
@@ -36,6 +58,14 @@
 .container-fluid .form-inline .btn {
   height: 3vw;
   margin: 1vw;
+}
+
+.container-fluid .form-inline .btn-submit {
+  background-color: #860F3F;
+}
+
+.container-fluid .form-inline .btn-submit:hover {
+  background-color: #731e48;
 }
 
 .container-fluid .form-inline input {
@@ -69,5 +99,15 @@
 .navbar {
   height: 5vw;
   background-color: #db2a10;
+}
+
+.navbar a h1 {
+  font-family: "Rock Salt", cursive;
+  color: white;
+  padding-left: 5vw;
+}
+
+.navbar a h1:hover {
+  color: black;
 }
 /*# sourceMappingURL=burger_style.css.map */
