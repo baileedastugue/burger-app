@@ -3,13 +3,15 @@ $green: #8f8a14;
 $purple: #731e48;
 $yellow: #ef8829;
 $focus-font: 'Rock Salt', cursive;
-$secondary-font: 'Merriweather', serif;
+$secondary-font: 'Roboto', sans-serif;
 
 #wrapper {
     overflow: hidden;
 }
 
 .container-fluid {
+    font-family: $secondary-font;
+    font-size: 1.2vw;
     // height: 38vw;
     h2 {
         font-family: $focus-font;

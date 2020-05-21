@@ -3,6 +3,8 @@
 }
 
 .container-fluid {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
   margin: 5vw 0vw;
   color: white;
   background-color: black;
